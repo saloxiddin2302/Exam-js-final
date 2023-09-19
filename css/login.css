@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+input::-moz-placeholder {
+  font-family: "montserrat";
+}
+
+input:-ms-input-placeholder {
+  font-family: "montserrat";
+}
+
+h1, h2, h3, h4, h5, h6,
+p, a, span button, input::placeholder, label {
+  font-family: "montserrat";
+}
+
+button, i {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+body {
+  background-color: #f2f2f2;
+  height: 100vh;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home > div {
+  width: 50%;
+}
+.home__left .container {
+  padding-top: 40px;
+  margin-left: 18%;
+  max-width: 450px;
+}
+.home__left .container h1 {
+  margin-bottom: 12px;
+}
+.home__left .container > p {
+  margin-bottom: 32px;
+}
+.home__left .container input {
+  display: block;
+  margin-bottom: 32px;
+  width: 100%;
+  padding: 12px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.home__left .container button {
+  padding: 10px;
+  width: 100%;
+  background-color: #fb771a;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.home__left .container h4 {
+  text-align: center;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.home__left .container .create {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+.home__left .container .create p {
+  cursor: pointer;
+}
+.home__left h3 {
+  text-align: center;
+  color: red;
+}
+.home__right {
+  height: 100vh;
+  background: url("../../assets/images/register.avif");
+  background-size: cover;
+  background-position: 0px 50%;
+}
+
+@media (max-width: 1200px) {
+  .home__left .container {
+    margin: 0;
+  }
+}
+@media (max-width: 700px) {
+  .home > div {
+    width: 100%;
+  }
+  .home__left .container {
+    padding-top: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 100%;
+  }
+  .home__right {
+    display: none;
+  }
+}
+@media (max-width: 468px) {
+  .home__left .container {
+    padding-top: 120px;
+  }
+  .home__left .container h1 {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  .home__left .container p {
+    font-size: 16px;
+    display: none;
+  }
+}

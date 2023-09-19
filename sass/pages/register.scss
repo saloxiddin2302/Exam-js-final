@@ -1,0 +1,94 @@
+@use "../global.scss";
+body {
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > div{
+        width: 50%;
+    } 
+    &__right {
+        .container {
+            padding-top: 30px;
+            margin-left: 15%;
+            max-width: 500px;
+            h1 {
+                margin-bottom: 12px;
+            }
+            & > p {
+                margin-bottom: 32px;
+            }
+            input {
+                display: block;
+                margin-bottom: 32px;
+                width: 100%;
+                padding: 12px;
+                outline: none;
+                border: none;
+                border-radius: 4px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            }
+            button {
+                padding: 10px;
+                width: 100%;
+                background-color: #fb771a;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-bottom: 12px;
+            }
+            margin-bottom: 32px;
+        }
+        h2 {
+            text-align: center;
+            color: red;
+        }
+    }
+    &__left {
+        height: 100vh;
+        background: url('../../assets/images/register.avif');
+        background-size: cover;
+        background-position: 0px 50%;
+    }
+}
+
+@media (max-width:700px) {
+    .home {
+        & > div {
+            width: 100%;
+        }
+        &__left {
+            display: none;
+        }
+
+        &__right {
+            .container {
+                padding-top: 80px;
+                max-width: 100%;
+                padding-left: 50px;
+                padding-right: 50px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 468px) {
+    .home {
+        &__right {
+            .container {
+                h1 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 32px;
+                }
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}

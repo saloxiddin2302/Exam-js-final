@@ -1,0 +1,119 @@
+@use "../global.scss";
+body {
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > div{
+        width: 50%;
+    } 
+    &__left {
+        .container {
+            padding-top: 40px;
+            margin-left: 18%;
+            max-width: 450px;
+            h1 {
+                margin-bottom: 12px;
+            }
+            & > p {
+                margin-bottom: 32px;
+            }
+            input {
+                display: block;
+                margin-bottom: 32px;
+                width: 100%;
+                padding: 12px;
+                outline: none;
+                border: none;
+                border-radius: 4px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            }
+            button {
+                padding: 10px;
+                width: 100%;
+                background-color: #fb771a;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-bottom: 12px;
+            }
+            h4 {
+                text-align: center;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .create {
+                display: flex;
+                justify-content: flex-end;
+                gap: 4px;
+                p {
+                    cursor: pointer;
+                }
+                margin-bottom: 32px;
+            }
+        }
+        h3 {
+            text-align: center;
+            color: red;
+        }
+    }
+    &__right {
+        height: 100vh;
+        background: url('../../assets/images/register.avif');
+        background-size: cover;
+        background-position: 0px 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home {
+        &__left {
+            .container{
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .home {
+        & > div {
+            width: 100%;
+        }
+        &__left {
+            .container {
+                padding-top: 150px;
+                padding-left: 50px;
+                padding-right: 50px;
+                max-width: 100%;
+            }
+        }
+        &__right {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 468px){
+    .home {
+        &__left {
+            .container {
+                padding-top: 120px;
+                h1 {
+                    font-size: 24px;
+                    margin-bottom: 32px;
+                    // text-align: center;
+                }
+                p {
+                    font-size: 16px;
+                    display: none;
+                }
+
+            }
+        }
+    }
+}

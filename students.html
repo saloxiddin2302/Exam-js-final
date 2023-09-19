@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+  <div class="modal">
+    <div class="modal__content">
+      <div class="modal__content__top">
+        <h2>Add a student</h2>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <form class="teacher-form">
+        <label for="">First Name:</label>
+        <input type="text" placeholder="" id="firstName" name="firstName" required>      
+        <label for="">Last Name:</label>
+        <input type="text" placeholder="" id="lastName" name="lastName" required>      
+        <label for="">Image URL:</label>
+        <input type="text" placeholder="" id="avatar" name="avatar" required>      
+        <label for="">Birthdate</label>
+        <input type="date" id="birthday" name="birthday">
+        <div class="isMarried">
+            <label for="isWork" class="isWork">Is Work: </label>
+            <input type="checkbox" id="isWork" class="isWork" name="isMarried">
+        </div>
+        <label for="">Field: </label>
+        <input type="text" placeholder="" id="field" name="field" required>      
+        <label for="">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" pattern="^\+998\d{9}$" title="Enter a valid phone number starting with +998 and followed by 9 digits" required>
+        <label for="">Email:</label>
+        <input type="email" id="email" name="email" required>      
+        <div class="form__btns">
+          <button class="cancel-btn">Cancel</button>
+          <button type="submit" class="modal__btn">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+    <main>
+      <section id="home">
+        <div class="container">
+          <div class="home">
+            <div class="home__top">
+              <div class="home__top__left">
+                <h2>Information about Students</h2>
+              </div>
+              <div class="home__top__right">
+                <div class="home__search">
+                  <input type="text" id="search">
+                </div>
+                <div class="home__addBtn">
+                  <button  class="modal-btn">Add Student</button>
+                </div>
+              </div>
+            </div>
+            <div class="home__total">
+              <p>Total Students: <span></span></p>
+            </div>
+            <div class="home__body">
+            </div>
+            <div class="pagination">
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/const.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/student.js"></script>
+  </body>
+</html>
